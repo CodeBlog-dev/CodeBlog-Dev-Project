@@ -1,7 +1,7 @@
-package jumelis.dev.proyectbackend.application.usecases;
+package jumelis.dev.projectbackend.application.usecases;
 
-import jumelis.dev.proyectbackend.domain.ports.in.DeleteArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.out.ArticleRepositoryPort;
+import jumelis.dev.projectbackend.domain.ports.in.DeleteArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.out.ArticleRepositoryPort;
 
 
 // DeleteArticleUseCaseImpl is an implementation of DeleteArticleUseCase port.

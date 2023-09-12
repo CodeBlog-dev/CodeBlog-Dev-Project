@@ -1,8 +1,8 @@
-package jumelis.dev.proyectbackend.application.usecases;
+package jumelis.dev.projectbackend.application.usecases;
 
-import jumelis.dev.proyectbackend.domain.ports.in.CreateArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.out.ArticleRepositoryPort;
-import jumelis.dev.proyectbackend.domain.models.Article;
+import jumelis.dev.projectbackend.domain.ports.in.CreateArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.out.ArticleRepositoryPort;
+import jumelis.dev.projectbackend.domain.models.Article;
 
 // CreateArticleUseCaseImpl is an implementation of CreateArticleUseCase.
 public class CreateArticleUseCaseImpl implements CreateArticleUseCase {

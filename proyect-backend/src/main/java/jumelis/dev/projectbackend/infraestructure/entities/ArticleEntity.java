@@ -1,9 +1,17 @@
-package jumelis.dev.proyectbackend.domain.models;
+package jumelis.dev.projectbackend.infraestructure.entities;
+
+import jakarta.persistence.*;
+import jumelis.dev.projectbackend.domain.models.Article;
 
 import java.time.LocalDateTime;
 
-// Article model class that represents the article entity in the domain layer
-public class Article {
+// ArticleEntity is an entity that is used by the infrastructure layer to persist articles.
+// It is mapped to the articles table in the database.
+@Entity
+@Table(name = "articles")
+public class ArticleEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String imageURL;
@@ -13,9 +21,13 @@ public class Article {
     private boolean isPublished;
     private String url;
 
-    // Constructor
-    public Article(Long id, String title, String imageURL, String author, LocalDateTime date, String content,
-                   boolean isPublished, String url) {
+    public ArticleEntity() {
+    }
+
+    // ArticleEntity is an entity that is used by the infrastructure layer to persist articles.
+    public ArticleEntity(Long id, String title, String imageURL, String author, LocalDateTime date, String content,
+                         boolean isPublished,
+                         String url) {
         this.id = id;
         this.title = title;
         this.imageURL = imageURL;
@@ -24,6 +36,18 @@ public class Article {
         this.content = content;
         this.isPublished = isPublished;
         this.url = url;
+    }
+
+    // fromDomainModel is a method that converts an Article domain model to an ArticleEntity entity.
+    public static ArticleEntity fromDomainModel(Article article) {
+        return new ArticleEntity(article.getId(), article.getTitle(), article.getImageURL(), article.getAuthor(),
+                article.getDate(), article.getContent(), article.isPublished(), article.getUrl());
+    }
+
+    // toDomainModel is a method that converts an ArticleEntity entity to an Article domain model.
+    public Article toDomainModel() {
+        return new Article(this.id, this.title, this.imageURL, this.author, this.date, this.content, this.isPublished,
+                this.url);
     }
 
     // Getters
@@ -91,12 +115,6 @@ public class Article {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    @Override
-    public String toString() {
-        return "Article [title=" + title + ", imageURL=" + imageURL + ", author=" + author + ", date=" + date
-                + ", content=" + content + ", isPublished=" + isPublished + ", url=" + url + "]";
     }
 
 }

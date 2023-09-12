@@ -1,10 +1,10 @@
-package jumelis.dev.proyectbackend;
+package jumelis.dev.projectbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProyectBackendApplicationTests {
+class ProjectBackendApplicationTests {
 
 	@Test
 	void contextLoads() {

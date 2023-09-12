@@ -1,4 +1,4 @@
-package jumelis.dev.proyectbackend.domain.ports.in;
+package jumelis.dev.projectbackend.domain.ports.in;
 
 public interface DeleteArticleUseCase {
 
