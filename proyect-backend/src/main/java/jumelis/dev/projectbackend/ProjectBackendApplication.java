@@ -1,13 +1,13 @@
-package jumelis.dev.proyectbackend;
+package jumelis.dev.projectbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProyectBackendApplication {
+public class ProjectBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProyectBackendApplication.class, args);
+		SpringApplication.run(ProjectBackendApplication.class, args);
 	}
 
 }

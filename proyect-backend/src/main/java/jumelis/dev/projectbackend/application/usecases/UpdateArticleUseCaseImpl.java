@@ -1,8 +1,8 @@
-package jumelis.dev.proyectbackend.application.usecases;
+package jumelis.dev.projectbackend.application.usecases;
 
-import jumelis.dev.proyectbackend.domain.models.Article;
-import jumelis.dev.proyectbackend.domain.ports.in.UpdateArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.out.ArticleRepositoryPort;
+import jumelis.dev.projectbackend.domain.models.Article;
+import jumelis.dev.projectbackend.domain.ports.in.UpdateArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.out.ArticleRepositoryPort;
 
 import java.util.Optional;
 

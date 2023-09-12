@@ -1,6 +1,6 @@
-package jumelis.dev.proyectbackend.domain.ports.out;
+package jumelis.dev.projectbackend.domain.ports.out;
 
-import jumelis.dev.proyectbackend.domain.models.Article;
+import jumelis.dev.projectbackend.domain.models.Article;
 
 import java.util.List;
 import java.util.Optional;

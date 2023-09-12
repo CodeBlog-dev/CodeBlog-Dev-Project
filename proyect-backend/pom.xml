@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>jumelis.dev</groupId>
-	<artifactId>proyect-backend</artifactId>
+	<artifactId>project-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>proyect-backend</name>
 	<description>Project for Spring Boot</description>

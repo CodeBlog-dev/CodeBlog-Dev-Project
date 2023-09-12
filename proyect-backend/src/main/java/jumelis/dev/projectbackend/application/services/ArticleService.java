@@ -1,10 +1,10 @@
-package jumelis.dev.proyectbackend.application.services;
+package jumelis.dev.projectbackend.application.services;
 
-import jumelis.dev.proyectbackend.domain.models.Article;
-import jumelis.dev.proyectbackend.domain.ports.in.CreateArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.in.DeleteArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.in.GetAllArticleUseCase;
-import jumelis.dev.proyectbackend.domain.ports.in.UpdateArticleUseCase;
+import jumelis.dev.projectbackend.domain.models.Article;
+import jumelis.dev.projectbackend.domain.ports.in.CreateArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.in.DeleteArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.in.GetAllArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.in.UpdateArticleUseCase;
 
 import java.util.List;
 import java.util.Optional;
