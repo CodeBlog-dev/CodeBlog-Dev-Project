@@ -1,19 +1,19 @@
 import api from "../lib/axios";
 
 export default {
-    arcliclesList() {
+    articlesList() {
         return api.get('/articles')
     },
-    agregarCliente(data) {
+    addArticle(data) {
         return api.post('/articles', data)
     },
-    obtenerCliente(id) {
+    getArticle(id) {
         return api.get('/articles/' + id)
     },
-    actualizarCliente(id, data) {
+    updateArticle(id, data) {
         return api.patch('/articles/' + id, data)
     },
-    eliminarCliente(id) {
+    deleteArticle(id) {
         return api.delete('/articles/' + id)
     }
 }
