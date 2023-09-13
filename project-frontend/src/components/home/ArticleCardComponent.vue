@@ -5,7 +5,7 @@ import ArticleService from '../../services/ArticleService'
 const articles = ref([])
 
 onMounted(() => {
-  ArticleService.arcliclesList()
+  ArticleService.articlesList()
     .then(({ data }) => articles.value = data.data)
     .catch(error => console.log('Hubo un error'))
 })
