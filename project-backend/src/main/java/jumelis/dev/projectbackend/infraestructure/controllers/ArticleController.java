@@ -90,4 +90,20 @@ public class ArticleController {
         response.put("data", articleService.getAll());
         return ResponseEntity.ok(response);
     }
+    @GetMapping("/articles/{id}")
+    public ResponseEntity<Map<String, Object>> getArticleById(@PathVariable Long id) {
+        Map<String, Object> response = new HashMap<>();
+        Optional<Article> optionalArticle = articleService.getById(id);
+        if (optionalArticle.isPresent()) {
+            response.put("success", true);
+            response.put("message", "Article retrieved successfully");
+            response.put("data", optionalArticle.get());
+            return ResponseEntity.ok(response);
+        } else {
+            response.put("success", false);
+            response.put("error", "Article not found");
+            response.put("message", "Article with id " + id + " was not found");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+        }
+    }
 }

@@ -1,30 +1,31 @@
 package jumelis.dev.projectbackend.application.services;
 
 import jumelis.dev.projectbackend.domain.models.Article;
-import jumelis.dev.projectbackend.domain.ports.in.CreateArticleUseCase;
-import jumelis.dev.projectbackend.domain.ports.in.DeleteArticleUseCase;
-import jumelis.dev.projectbackend.domain.ports.in.GetAllArticleUseCase;
-import jumelis.dev.projectbackend.domain.ports.in.UpdateArticleUseCase;
+import jumelis.dev.projectbackend.domain.ports.in.*;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ArticleService implements CreateArticleUseCase, UpdateArticleUseCase, DeleteArticleUseCase, GetAllArticleUseCase {
+public class ArticleService implements CreateArticleUseCase, UpdateArticleUseCase, DeleteArticleUseCase, GetAllArticleUseCase, GetArticleByIdUseCase {
 
     private final CreateArticleUseCase createArticleUseCase;
     private final UpdateArticleUseCase updateArticleUseCase;
     private final DeleteArticleUseCase deleteArticleUseCase;
 
     private final GetAllArticleUseCase getAllArticleUseCase;
+    private final GetArticleByIdUseCase getArticleByIdUseCase;
 
     public ArticleService(CreateArticleUseCase createArticleUseCase,
                           UpdateArticleUseCase updateArticleUseCase,
                           DeleteArticleUseCase deleteArticleUseCase,
-                          GetAllArticleUseCase getAllArticleUseCase) {
+                          GetAllArticleUseCase getAllArticleUseCase,
+                          GetArticleByIdUseCase getArticleByIdUseCase) {
         this.createArticleUseCase = createArticleUseCase;
         this.updateArticleUseCase = updateArticleUseCase;
         this.deleteArticleUseCase = deleteArticleUseCase;
         this.getAllArticleUseCase = getAllArticleUseCase;
+        this.getArticleByIdUseCase = getArticleByIdUseCase;
+
     }
 
     @Override
@@ -45,5 +46,10 @@ public class ArticleService implements CreateArticleUseCase, UpdateArticleUseCas
     @Override
     public List<Article> getAll() {
         return getAllArticleUseCase.getAll();
+    }
+
+    @Override
+    public Optional<Article> getById(Long id) {
+        return getArticleByIdUseCase.getById(id);
     }
 }

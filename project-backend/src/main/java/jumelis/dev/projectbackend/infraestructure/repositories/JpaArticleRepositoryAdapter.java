@@ -53,4 +53,10 @@ public class JpaArticleRepositoryAdapter implements ArticleRepositoryPort {
     public List<Article> getAll() {
         return jpaArticleRepository.findAll().stream().map(ArticleEntity::toDomainModel).collect(Collectors.toList());
     }
+
+    // getById is a method that gets an article by id.
+    @Override
+    public Optional<Article> getById(Long id) {
+        return jpaArticleRepository.findById(id).map(ArticleEntity::toDomainModel);
+    }
 }

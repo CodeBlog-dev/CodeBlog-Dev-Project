@@ -16,4 +16,5 @@ public interface ArticleRepositoryPort {
     boolean delete(Long id);
 
     List<Article> getAll();
+    Optional<Article> getById(Long id);
 }
